@@ -1,0 +1,38 @@
+GET http://localhost:3003/api/blogs
+
+###
+GET http://localhost:3003/api/users
+
+###
+POST http://localhost:3003/api/login
+content-type: application/json
+
+{
+    "username": "admin1",
+    "password": "admin1"
+}
+
+###
+POST http://localhost:3003/api/users
+content-type: application/json
+
+{
+    "username": "admin1",
+    "password": "admin1"
+}
+
+###
+
+POST http://localhost:3003/api/blogs
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluMSIsImlkIjoiNjM4NjVhNTM0OTc5YTUzZTA4OWJkZjRiIiwiaWF0IjoxNjY5NzQ5MzYxLCJleHAiOjE2Njk3NTI5NjF9.kx8XPdTAx8yzXYH5V3UTLnIOaqELl79QOSK3Q6iauTQ
+
+{
+    "title": "blog 1",
+    "author": "",
+    "url": "abcdef.com"
+}
+
+###
+DELETE http://localhost:3003/api/blogs/63865a874979a53e089bdf58
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluMSIsImlkIjoiNjM4NjVhNTM0OTc5YTUzZTA4OWJkZjRiIiwiaWF0IjoxNjY5NzQ5NDg1LCJleHAiOjE2Njk3NTMwODV9.ITqFeJZzgwktcCe4SgqOWZIXm245Ox9OYdwQ9SbXFkY
